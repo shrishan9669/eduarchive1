@@ -407,7 +407,18 @@ export default function Show(){
         </div>
     )
 }
-            
+function Circularloader() {
+  return (
+    <div className="flex justify-center items-center h-screen">
+      <div className="relative">
+        <div className="w-16 h-16 border-8 border-gray-800 border-t-transparent rounded-full animate-spin"></div>
+        <div className="absolute top-2 left-2 w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center">
+          <div className="w-3 h-3 bg-gray-300 rounded-sm"></div>
+        </div>
+      </div>
+    </div>
+  );
+}         
 function Cardyours({ subject, pdfid, type }: any) {
     const [pdfurl, setPdfurl] = useState('');
     const [preview, setPreview] = useState(false);
@@ -419,18 +430,7 @@ function Cardyours({ subject, pdfid, type }: any) {
       setPreview(true);
     }
   
-    function Circularloader() {
-      return (
-        <div className="flex justify-center items-center h-screen">
-          <div className="relative">
-            <div className="w-16 h-16 border-8 border-gray-800 border-t-transparent rounded-full animate-spin"></div>
-            <div className="absolute top-2 left-2 w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center">
-              <div className="w-3 h-3 bg-gray-300 rounded-sm"></div>
-            </div>
-          </div>
-        </div>
-      );
-    }
+   
   
     return (
       <div className="w-64 h-80 shadow-lg rounded-xl flex flex-col bg-gradient-to-b from-white to-gray-100 border border-gray-200 hover:shadow-2xl transform hover:scale-105 transition duration-300">
@@ -536,7 +536,7 @@ function Cardyours({ subject, pdfid, type }: any) {
   function Cardall({ subject, pdfid, type }: any) {
     const [pdfurl, setPdfurl] = useState('');
     const [preview, setPreview] = useState(false);
-    const [delbuffer, setDelBuffer] = useState(false);
+  
   
     function handlePreview(name: any) {
       const path = 'https://backend-s1z7.onrender.com/pdfpreview';
@@ -544,18 +544,7 @@ function Cardyours({ subject, pdfid, type }: any) {
       setPreview(true);
     }
   
-    function Circularloader() {
-      return (
-        <div className="flex justify-center items-center h-screen">
-          <div className="relative">
-            <div className="w-16 h-16 border-8 border-gray-800 border-t-transparent rounded-full animate-spin"></div>
-            <div className="absolute top-2 left-2 w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center">
-              <div className="w-3 h-3 bg-gray-300 rounded-sm"></div>
-            </div>
-          </div>
-        </div>
-      );
-    }
+   
   
     return (
       <div className="w-64 h-80 shadow-lg rounded-xl flex flex-col bg-gradient-to-b from-white to-gray-100 border border-gray-200 hover:shadow-2xl transform hover:scale-105 transition duration-300">
