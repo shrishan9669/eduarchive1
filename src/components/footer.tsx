@@ -27,25 +27,25 @@ export default function Footer() {
       </div>
 
       {/* Middle Section: Navigation Links */}
-      <div className="flex gap-6 mt-4 md:mt-0">
-        <span
+      <div className="md:flex flex-col items-start w-full  gap-6 mt-4 md:mt-0">
+        <p
           onClick={() => nav("/")}
           className="cursor-pointer hover:text-pink-600 transition-all duration-300 font-medium"
         >
           Home
-        </span>
-        <span className="cursor-pointer hover:text-pink-600 transition-all duration-300 font-medium">
+        </p>
+        <p className="cursor-pointer hover:text-pink-600 transition-all duration-300 font-medium">
           Contact Us
-        </span>
-        <span className="cursor-pointer hover:text-pink-600 transition-all duration-300 font-medium">
+        </p>
+        <p className="cursor-pointer hover:text-pink-600 transition-all duration-300 font-medium">
           Terms
-        </span>
-        <span className="cursor-pointer hover:text-pink-600 transition-all duration-300 font-medium">
+        </p>
+        <p className="cursor-pointer hover:text-pink-600 transition-all duration-300 font-medium">
           Contributors
-        </span>
-        <span className="cursor-pointer hover:text-pink-600 transition-all duration-300 font-medium">
+        </p>
+        <p className="cursor-pointer hover:text-pink-600 transition-all duration-300 font-medium">
           College
-        </span>
+        </p>
       </div>
 
       {/* Right Section: Social Links */}
