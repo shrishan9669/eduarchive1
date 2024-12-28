@@ -155,12 +155,13 @@ export default function Show(){
               url: `https://backend-s1z7.onrender.com/admin/findpdfs?semester=${Number(semester)}&course=${course}`,
               method: "GET",
             });
-            console.log(data.data.all);
+            console.log(data.data);
             if (data.data) {
               setData(data.data.all);
             }
           } catch (err) {
             console.error("Error in frontend while getting PDFs! ->", err);
+            alert("Failed to fetch PDFs. Please try again later.");
           } finally {
             setBuffer(false);
           }
@@ -232,15 +233,19 @@ export default function Show(){
       </label>
       <select
         id="subject"
-        onChange={(e) => setSubject(e.target.value.toLowerCase())}
+        
+        onChange={(e) => {
+          console.log(e.target.value)
+          setSubject(e.target.value.toLowerCase())
+        }}
         className="border border-gray-400 rounded-lg py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
       >
         <option value="none">None</option>
-        <option value="DSA">DSA</option>
-        <option value="MIS">MIS</option>
-        <option value="ACCOUNTS">Accounts</option>
-        <option value="DIGITAL MARKETING">DM</option>
-        <option value="STATISTICS">Stats</option>
+        <option value="dsa">DSA</option>
+        <option value="mis">MIS</option>
+        <option value="accounts">ACCOUNTS</option>
+        <option value="dm">DM</option>
+        <option  value="stats">STATS</option>
       </select>
     </div>
 
